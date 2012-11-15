@@ -1,0 +1,43 @@
+C:\GitHub\{Some Resource} [master]> git pull
+error: Connection time-out while accessing https://github.com/{Some Resource}/{Some Resource}.git/
+info/refs
+fatal: HTTP request failed
+
+C:\GitHub\{Some Resource} [master]> git push
+error: Connection time-out while accessing https://github.com/{Some Resource}/{Some Resource}.git/
+info/refs
+fatal: HTTP request failed
+
+C:\GitHub\{Some Resource} [master]> git config --global http.proxy http://127.0.0.1:3128
+C:\GitHub\{Some Resource} [master]> git config --global https.proxy http://127.0.0.1:3128
+
+C:\GitHub\{Some Resource} [master]> git push
+To https://github.com/{Some Resource}/{Some Resource}.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/{Some Resource}/{Some Resource}.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\GitHub\{Some Resource} [master]> git pull
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 4 (delta 0)
+Unpacking objects: 100% (4/4), done.
+From https://github.com/{Some Resource}/{Some Resource}
+   cc9f08e..acbfcfc  master     -> origin/master
+Merge made by the 'recursive' strategy.
+ A Test file.txt.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 A Test file.txt.txt
+C:\GitHub\{Some Resource} [master]> git push
+Counting objects: 9, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 746 bytes, done.
+Total 7 (delta 3), reused 0 (delta 0)
+To https://github.com/{Some Resource}/{Some Resource}.git
+   acbfcfc..8c76869  master -> master
+
+C:\GitHub\{Some Resource} [master]>
